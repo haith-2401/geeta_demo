@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/ui/pages/authentication/authenticationMethods/authentication_method.dart';
+import 'package:flutter_application/ui/pages/authentication/gettingStarted/getting_started_page.dart';
+import 'package:flutter_application/ui/pages/authentication/registerPage/register_page.dart';
 import 'package:flutter_application/utils/navigator_support.dart';
 
 import '../pages.dart';
@@ -17,7 +20,19 @@ class _AuthenticationNavigatorState extends State<AuthenticationNavigator> {
     return NavigatorSupport(
       initialRoute: 'login',
       onGenerateRoute: (settings) {
-        return MaterialPageRoute(builder: (context) => const SignInPage());
+        switch (settings.name) {
+          case GettingStartedPage.routerName:
+            return MaterialPageRoute(builder: (context) => const GettingStartedPage());
+          case AuthenticationMethods.routerName:
+            return MaterialPageRoute(builder: (context) => const AuthenticationMethods());
+          case SignInPage.routerName:
+            return MaterialPageRoute(builder: (context) => const SignInPage());
+          case RegisterPage.routerName:
+            return MaterialPageRoute(builder: (context) => const RegisterPage());
+          default:
+            return MaterialPageRoute(builder: (context) => const GettingStartedPage());
+        }
+
       },
     );
   }
