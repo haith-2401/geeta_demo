@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application/gen/fonts.gen.dart';
+
 import 'package:flutter_application/lib.dart';
 import 'package:flutter_application/ui/pages/authentication/registerPage/register_page.dart';
 import 'package:flutter_application/utils/color_extension.dart';
