@@ -122,8 +122,8 @@ class _SignInPageState extends State<SignInPage> {
           color: Colors.white,
           child: Column(
             children: [
-              TextFieldSection(sectionTitle: "Email address", imagePath:  Assets.images.icEnvelope.path, shouldShowWarning: true,),
-              TextFieldSection(sectionTitle: "Password", imagePath: Assets.images.icLock.path, shouldShowWarning: true,),
+              TextFieldSection(sectionTitle: "Email address", imagePath:  Assets.images.icEnvelope.path, shouldShowWarning: true, showIcon: true,),
+              TextFieldSection(sectionTitle: "Password", imagePath: Assets.images.icLock.path, shouldShowWarning: true, showIcon: true,),
               const SizedBox(height: 10,),
               Container(
                 padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),

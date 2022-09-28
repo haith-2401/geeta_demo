@@ -38,8 +38,6 @@ class _GettingStartedPageState extends State<GettingStartedPage> {
                   return Container(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height,
-                    margin: const EdgeInsets.symmetric(horizontal: 0.0),
-                    padding: const EdgeInsets.symmetric(horizontal: 0.0),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fill,

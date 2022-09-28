@@ -3,17 +3,17 @@ import '../../gen/assets.gen.dart';
 import '../../utils/color_extension.dart';
 
 class TextFieldSection extends StatefulWidget {
-
-  final bool isActive;
   final bool shouldShowWarning;
   final String sectionTitle;
   final String imagePath;
 
+  final bool showIcon;
+
   const TextFieldSection(
       {Key? key,
-      this.isActive = false,
       required this.sectionTitle,
       required this.imagePath,
+      this.showIcon = false,
       this.shouldShowWarning = false})
       : super(key: key);
 
@@ -22,6 +22,28 @@ class TextFieldSection extends StatefulWidget {
 }
 
 class _TextFieldSectionState extends State<TextFieldSection> {
+  final FocusNode focusNode = FocusNode();
+  bool isActive = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    focusNode.addListener(() {
+      isActive = focusNode.hasFocus;
+      setState(() {
+
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    focusNode.removeListener(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,27 +52,59 @@ class _TextFieldSectionState extends State<TextFieldSection> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(widget.sectionTitle, style: const TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),),
-          const SizedBox(height: 10,),
+          Text(
+            widget.sectionTitle,
+            style: const TextStyle(
+                color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
           Container(
-              width: MediaQuery.of(context).size.width -88,
+              width: MediaQuery.of(context).size.width - 88,
               height: 50,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                border: Border.all(color: widget.isActive? HexColor.fromHex("#6342E8") : HexColor.fromHex("#A1A1A1")),
+                border: Border.all(
+                    color: isActive
+                        ? HexColor.fromHex("#6342E8")
+                        : HexColor.fromHex("#A1A1A1")),
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(image: AssetImage(widget.imagePath)),
-                  const SizedBox(width: 10,),
-                  const Expanded(child: TextField(style: TextStyle(fontSize: 12, color: Colors.black),)),
-                  const SizedBox(width: 10,),
-                  Image(image: AssetImage(widget.isActive? Assets.images.icErrorCircleViolet.path : Assets.images.icErrorCircleBlack.path)),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: TextField(
+                      focusNode: focusNode,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintStyle: TextStyle(color: HexColor.fromHex("#D2D2D2")),
+                        hintText: widget.sectionTitle
+                      ),
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  if (widget.showIcon) ...[
+                    Image(
+                      image: AssetImage(isActive
+                          ? Assets.images.icErrorCircleViolet.path
+                          : Assets.images.icErrorCircleBlack.path),
+                    ),
+                  ] else
+                    Container(),
                 ],
-              )
-          )
+              ))
         ],
       ),
     );

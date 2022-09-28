@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/gen/fonts.gen.dart';
+import 'package:flutter_application/lib.dart';
 
 ThemeData light(BuildContext context) {
   return ThemeData.light().copyWith(
@@ -29,5 +31,17 @@ ThemeData dark(BuildContext context) {
         shape: const StadiumBorder(),
       ),
     ),
+      textTheme: ThemeData.light().textTheme.copyWith(
+        headline1: ThemeData.light().textTheme.headline1?.copyWith(
+          fontFamily: FontFamily.lato,
+        ),
+
+        headline2: ThemeData.light().textTheme.headline2?.copyWith(
+            fontFamily: FontFamily.lato,
+            color: Colors.black,
+            fontSize: 44,
+            fontWeight: FontWeight.bold
+        ),
+      )
   );
 }

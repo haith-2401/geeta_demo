@@ -66,5 +66,19 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Lato-Light.ttf
+          weight: 200
+        - asset: assets/fonts/Lato-Regular.ttf
+          weight: 300
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Lato-Black.ttf
+          weight: 900
 flutter_intl:
   enabled: true
+
