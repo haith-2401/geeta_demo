@@ -28,8 +28,6 @@ class _AuthenticationMethodsState extends State<AuthenticationMethods> {
               child: Container(
                 width: mediaQueryData.size.width,
                 height: mediaQueryData.size.height,
-                margin: EdgeInsets.symmetric(vertical: 0.0),
-                padding: EdgeInsets.symmetric(vertical: 0.0),
 
                 decoration: BoxDecoration(
                   image: DecorationImage(

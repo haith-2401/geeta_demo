@@ -4,6 +4,7 @@ import 'package:flutter_application/utils/navigator_support.dart';
 import '../pages.dart';
 
 class MainNavigator extends StatefulWidget {
+  static const String routerName = "MainNavigator";
   const MainNavigator({Key? key}) : super(key: key);
 
   @override

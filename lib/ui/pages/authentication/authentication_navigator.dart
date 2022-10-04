@@ -29,6 +29,8 @@ class _AuthenticationNavigatorState extends State<AuthenticationNavigator> {
             return MaterialPageRoute(builder: (context) => const SignInPage());
           case RegisterPage.routerName:
             return MaterialPageRoute(builder: (context) => const RegisterPage());
+          case MainNavigator.routerName:
+            return MaterialPageRoute(builder: (context) => const MainNavigator());
           default:
             return MaterialPageRoute(builder: (context) => const GettingStartedPage());
         }

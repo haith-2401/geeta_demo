@@ -4,6 +4,7 @@ import 'package:flutter_application/utils/color_extension.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../../generated/l10n.dart';
 import '../../../widgets/TextFieldSection.dart';
+import '../registerPage/register_page.dart';
 
 class SignInPage extends StatefulWidget {
   static const String routerName = "SignInPage";
@@ -98,7 +99,6 @@ class _SignInPageState extends State<SignInPage> {
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
-                      // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       alignment: Alignment.centerLeft,
                     ),
                     onPressed: () {
@@ -162,7 +162,9 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(MainNavigator.routerName);
+                },
                 style: ElevatedButton.styleFrom(
                     primary: HexColor.fromHex("#6342E8"),
                     shape: const StadiumBorder(),
@@ -188,7 +190,7 @@ class _SignInPageState extends State<SignInPage> {
                       alignment: Alignment.centerLeft,
                     ),
                     onPressed: () {
-                      // Handle authentication and navigate
+                      Navigator.of(context).pushReplacementNamed(RegisterPage.routerName);
                     },
                     child: Text(
                       " Create an Account",
