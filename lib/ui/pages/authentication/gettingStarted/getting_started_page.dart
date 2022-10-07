@@ -1,9 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application/gen/assets.gen.dart';
 import 'package:flutter_application/ui/pages/authentication/authenticationMethods/authentication_method.dart';
-import 'package:flutter_application/ui/pages/pages.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 class GettingStartedPage extends StatefulWidget {
   static const String routerName = "GettingStartedPage";

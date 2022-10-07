@@ -4,6 +4,7 @@ import 'package:flutter_application/utils/navigator_support.dart';
 import '../pages.dart';
 
 class MainNavigator extends StatefulWidget {
+  static const String routerName = "MainNavigator";
   const MainNavigator({Key? key}) : super(key: key);
 
   @override
@@ -16,6 +17,10 @@ class _MainNavigatorState extends State<MainNavigator> {
     return NavigatorSupport(
       initialRoute: 'home',
       onGenerateRoute: (setting) {
+        switch (setting.name) {
+          default:
+            return MaterialPageRoute(builder: (context) => const HomePage());
+        }
         return MaterialPageRoute(builder: (context) => const HomePage());
       },
     );

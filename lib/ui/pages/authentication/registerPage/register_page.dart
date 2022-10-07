@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/lib.dart';
 import 'package:flutter_application/utils/color_extension.dart';
+
 import '../../../../gen/assets.gen.dart';
-import '../../../../generated/l10n.dart';
 import '../../../widgets/TextFieldSection.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -26,8 +26,8 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Container(
             width: mediaQueryData.size.width,
             height: mediaQueryData.size.height,
-            margin: EdgeInsets.symmetric(vertical: 0.0),
-            padding: EdgeInsets.symmetric(vertical: 0.0),
+            margin: const EdgeInsets.symmetric(vertical: 0.0),
+            padding: const EdgeInsets.symmetric(vertical: 0.0),
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
@@ -43,7 +43,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 0, 0),
                   child: InkResponse(
                       onTap: () {
                         Navigator.of(context).pop();
@@ -67,7 +67,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),
                   child: const Text("Get’s started with Geeta.",
                       style: TextStyle(
                         color: Colors.white,
@@ -81,7 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),
                   child: Row(
                     children: [
                       const Text("Already have an account?",
@@ -113,7 +113,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Expanded(
                     child: Container(
                   alignment: Alignment.bottomLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 40),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 40),
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
@@ -155,7 +155,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     height: 20,
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(44, 0, 44, 0),
+                    padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(

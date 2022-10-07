@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/lib.dart';
 import 'package:flutter_application/utils/color_extension.dart';
+
 import '../../../../gen/assets.gen.dart';
-import '../../../../generated/l10n.dart';
 import '../../../widgets/TextFieldSection.dart';
+import '../registerPage/register_page.dart';
 
 class SignInPage extends StatefulWidget {
   static const String routerName = "SignInPage";
@@ -26,8 +27,8 @@ class _SignInPageState extends State<SignInPage> {
           child: Container(
             width: mediaQueryData.size.width,
             height: mediaQueryData.size.height,
-            margin: EdgeInsets.symmetric(vertical: 0.0),
-            padding: EdgeInsets.symmetric(vertical: 0.0),
+            margin: const EdgeInsets.symmetric(vertical: 0.0),
+            padding: const EdgeInsets.symmetric(vertical: 0.0),
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.fill,
@@ -43,7 +44,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 0, 0),
                   child: InkResponse(
                       onTap: () {
                         Navigator.of(context).pop();
@@ -67,7 +68,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),
                   child: const Text("Welcome Back!",
                       style: TextStyle(
                         color: Colors.white,
@@ -81,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 0),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 0),
                   child: const Text(
                       "Yay! You're back! Thanks for shopping with us\nWe have excited deals and promotions going on, grab your pick now! ",
                       style: TextStyle(
@@ -94,11 +95,10 @@ class _SignInPageState extends State<SignInPage> {
                 Expanded(
                     child: Container(
                   alignment: Alignment.bottomLeft,
-                  padding: EdgeInsets.fromLTRB(44, 0, 44, 40),
+                  padding: const EdgeInsets.fromLTRB(44, 0, 44, 40),
                   child: TextButton(
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
-                      // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       alignment: Alignment.centerLeft,
                     ),
                     onPressed: () {
@@ -162,7 +162,9 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(MainNavigator.routerName);
+                },
                 style: ElevatedButton.styleFrom(
                     primary: HexColor.fromHex("#6342E8"),
                     shape: const StadiumBorder(),
@@ -188,7 +190,7 @@ class _SignInPageState extends State<SignInPage> {
                       alignment: Alignment.centerLeft,
                     ),
                     onPressed: () {
-                      // Handle authentication and navigate
+                      Navigator.of(context).pushReplacementNamed(RegisterPage.routerName);
                     },
                     child: Text(
                       " Create an Account",

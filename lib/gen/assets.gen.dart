@@ -12,8 +12,39 @@ import 'package:flutter/widgets.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/Cart icon.png
+  AssetGenImage get cartIcon =>
+      const AssetGenImage('assets/icons/Cart icon.png');
+
+  /// File path: assets/icons/Favorite.png
+  AssetGenImage get favorite =>
+      const AssetGenImage('assets/icons/Favorite.png');
+
+  /// File path: assets/icons/Menu.png
+  AssetGenImage get menu => const AssetGenImage('assets/icons/Menu.png');
+
+  /// File path: assets/icons/Search Icon.png
+  AssetGenImage get searchIcon =>
+      const AssetGenImage('assets/icons/Search Icon.png');
+
+  /// File path: assets/icons/full_view_ic.png
+  AssetGenImage get fullViewIc =>
+      const AssetGenImage('assets/icons/full_view_ic.png');
+
+  /// File path: assets/icons/grid_view_ic.png
+  AssetGenImage get gridViewIc =>
+      const AssetGenImage('assets/icons/grid_view_ic.png');
+
   /// File path: assets/icons/home_black_24dp.svg
   String get homeBlack24dp => 'assets/icons/home_black_24dp.svg';
+
+  /// File path: assets/icons/notification.png
+  AssetGenImage get notification =>
+      const AssetGenImage('assets/icons/notification.png');
+
+  /// File path: assets/icons/sort_tool_ic.png
+  AssetGenImage get sortToolIc =>
+      const AssetGenImage('assets/icons/sort_tool_ic.png');
 }
 
 class $AssetsImagesGen {
@@ -30,6 +61,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/back_arrow.png
   AssetGenImage get backArrow =>
       const AssetGenImage('assets/images/back_arrow.png');
+
+  /// File path: assets/images/demo_product.png
+  AssetGenImage get demoProduct =>
+      const AssetGenImage('assets/images/demo_product.png');
 
   /// File path: assets/images/getting_started.png
   AssetGenImage get gettingStartedPng =>
