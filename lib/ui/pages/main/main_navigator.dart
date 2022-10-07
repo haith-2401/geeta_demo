@@ -17,6 +17,10 @@ class _MainNavigatorState extends State<MainNavigator> {
     return NavigatorSupport(
       initialRoute: 'home',
       onGenerateRoute: (setting) {
+        switch (setting.name) {
+          default:
+            return MaterialPageRoute(builder: (context) => const HomePage());
+        }
         return MaterialPageRoute(builder: (context) => const HomePage());
       },
     );
